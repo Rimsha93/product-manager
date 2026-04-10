@@ -118,7 +118,7 @@
         {{-- Brand --}}
         <div class="text-center mb-4">
             <div class="brand-title">Product<span>Manager</span></div>
-            <p class="text-muted mt-1" style="font-size:0.9rem;">Apne account mein login karein</p>
+            <p class="text-muted mt-1" style="font-size:0.9rem;">Login to your Account</p>
         </div>
 
         {{-- Session Error --}}
@@ -152,7 +152,7 @@
                     </div>
                 @enderror
                 <div class="invalid-feedback" id="emailError">
-                    Valid email address daalen.
+                    Input Valid email address.
                 </div>
             </div>
 
@@ -177,7 +177,7 @@
                     </div>
                 @enderror
                 <div class="invalid-feedback" id="passwordError">
-                    Password daalna zaroori hai.
+                    Must enter your password.
                 </div>
             </div>
 
@@ -201,12 +201,12 @@
         </form>
 
         {{-- Divider --}}
-        <div class="divider">ya</div>
+        <div class="divider">Or</div>
 
         {{-- Register Link --}}
         @if (Route::has('register'))
             <a href="{{ route('register') }}" class="btn-register">
-                <i class="bi bi-person-plus me-2"></i>Naya Account Banayein
+                <i class="bi bi-person-plus me-2"></i>Don't have an account? Register
             </a>
         @endif
 

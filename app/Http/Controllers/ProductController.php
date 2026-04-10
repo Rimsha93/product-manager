@@ -8,8 +8,14 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::where('user_id', auth()->id())->latest()->paginate(8);
-        return view('products.index', compact('products'));
+         $search   = request('search');
+    $products = Product::where('user_id', auth()->id())
+        ->when($search, function ($query, $search) {
+            $query->where('name', 'like', "%{$search}%")
+                  ->orWhere('category', 'like', "%{$search}%");
+        })  ->latest()  ->paginate(8);
+
+    return view('products.index', compact('products', 'search'));
     }
 
     public function create()

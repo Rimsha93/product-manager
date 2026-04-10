@@ -13,3 +13,7 @@ Route::middleware(['auth'])->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/settings', function () {
+    return view('settings');
+})->middleware('auth')->name('settings');

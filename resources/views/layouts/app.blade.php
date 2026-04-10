@@ -185,7 +185,7 @@
         <a href="{{ route('profile.edit') }}" class="nav-link {{ request()->routeIs('profile.*') ? 'active' : '' }}">
             <i class="bi bi-person-circle"></i> Profile
         </a>
-        <a href="{{ route('settings') }}" class="nav-link {{ request()->routeIs('settings') ? 'active' : '' }}">
+        <a href="{{ route('setting') }}" class="nav-link {{ request()->routeIs('setting') ? 'active' : '' }}">
             <i class="bi bi-gear"></i> Settings
         </a>
     </nav>
